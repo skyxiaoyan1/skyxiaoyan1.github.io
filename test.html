@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        div,li,ul,body {
+            margin: 0;
+            padding: 0;
+        }
+        ul,li {
+            list-style: none;
+        }
+        .slide {
+            position: relative;
+        }
+        .slide .slide-items li img {
+            width: 100%;
+        }
+        .slide .slide-items li {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            transition: left 2s;
+        }
+        .slide-nav li{
+            border: 2px solid #ffffff;
+            height: 8px;
+            width: 8px;
+            border-radius: 90%;
+
+        }
+        .slide-nav {
+            position: absolute;
+            top: 460px;
+            left: 50px;
+        }
+        .slide-nav li {
+            float: left;
+            margin: 8px;
+            
+        }
+        .slide-nav .active {
+            background-color: goldenrod;
+        }
+
+    </style>
+    <script>
+        var itemToShow=1;
+        function showSlide(item){
+
+        switch(item)
+        {
+          case 1:
+            $(".slide .slide-items li:nth-child(1)").css("transition","left 2s");
+            $(".slide .slide-items li:nth-child(1)").css("left","0%");
+
+            $(".slide .slide-items li:nth-child(2)").css("transition","left 0s");
+            $(".slide .slide-items li:nth-child(2)").css("left","100%");
+
+
+            $(".slide .slide-items li:nth-child(3)").css("left","-100%");
+
+            $(".slide .slide-nav li").removeClass("active");
+            $(".slide .slide-nav li:nth-child(1)").addClass("active");
+           break;
+          case 2:
+          $(".slide .slide-items li:nth-child(2)").css("transition","left 2s");
+          $(".slide .slide-items li:nth-child(2)").css("left","0%");
+
+          $(".slide .slide-items li:nth-child(3)").css("transition","left 0s");
+          $(".slide .slide-items li:nth-child(3)").css("left","100%");
+          
+
+
+          $(".slide .slide-items li:nth-child(1)").css("left","-100%");
+
+          $(".slide .slide-nav li").removeClass("active");
+          $(".slide .slide-nav li:nth-child(2)").addClass("active");
+          break;
+          default:
+          $(".slide .slide-items li:nth-child(3)").css("transition","left 2s");
+          $(".slide .slide-items li:nth-child(3)").css("left","0%");
+
+          $(".slide .slide-items li:nth-child(1)").css("transition","left 0s");
+          $(".slide .slide-items li:nth-child(1)").css("left","100%");
+
+          $(".slide .slide-items li:nth-child(2)").css("left","-100%");
+
+          $(".slide .slide-nav li").removeClass("active");
+          $(".slide .slide-nav li:nth-child(3)").addClass("active");
+        }
+
+        }
+        $(document).ready(function(){
+            var autotimer = setInterval(() => {
+                //切换动作
+                console.log("fff");
+                var width = document.body.clientWidth;
+                $(".slide li img").css("width",width.toString());
+                
+                showSlide(itemToShow);
+                itemToShow++;
+                if(itemToShow==4)
+                {
+                    itemToShow=1;
+                }
+
+
+            }, 3000);
+
+
+            $("p").click(function(){
+                $(this).hide();
+            });
+            });
+    </script>
+</head>
+<body>
+    <div class="slide">
+        <ul class="slide-items">
+            <li>
+                <img src="./img/slide0.png" alt="">
+            </li>
+            <li style="left:100%">
+                <img src="./img/slide1.jpg" alt="">
+
+            </li>
+            <li style="left: -200%">
+                <img src="./img/slide2.jpg" alt="">
+            </li>
+        </ul>
+        <ul class="slide-nav">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+.com-items .com-item{
+    padding: 40px 20px 40px 20px;
+}
+.com-items .com-item img{
+    float: left;
+    width: 34%;
+    padding: 20px 60px 40px 60px;
+}
+.com-items .com-item p{
+    line-height: 28px;
+}
+.com-items:last-child{
+    padding-bottom: 100px;
+}
+/*隔行换边*/
+.com-items:nth-child(odd) .com-item img{
+    float: right;
+}
+.header {
+    background-image: url(./../img/productHead.jpg);
+}

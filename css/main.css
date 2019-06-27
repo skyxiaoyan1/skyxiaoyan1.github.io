@@ -1,0 +1,275 @@
+.nav{
+    background-color: black;
+    opacity: 0.6;
+    height: 74px;
+    width: 100%;
+    line-height: 74px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.nav .logo {
+    padding: 6px 100px 0 100px;
+    float: left;
+    height: 74px;
+}
+
+.nav .nav-bar {
+    float: right;
+}
+.nav .nav-bar>ul>li{
+    float: left;
+    padding: 0 10px 0 10px;
+}
+.nav .nav-bar>ul>li a{
+    color: #9d9d9d;
+}
+.nav .nav-bar>ul>li a:hover{
+    color: white;
+}
+.nav .nav-bar .nav-last {
+    padding-right: 100px;
+}
+
+.nav-sub{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background-color: black;
+    opacity: 0.9;
+    width: 100%;
+    color: white;
+}
+.nav-sub>ul{
+    width: 50%;
+    margin: 0 auto 0 auto;
+}
+.nav-sub>ul>li{
+    float: left;
+    background-image:url(./../img/nav_xw_01.png); 
+    background-repeat:no-repeat;
+    background-position: 0% 50%;
+    padding: 8px 40px 8px 40px;
+    line-height: 40px;
+}
+
+
+.slide {
+    position: relative;
+    overflow: hidden;
+}
+.slide .slide-items li img {
+    width: 100%;
+}
+.slide .slide-items li {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transition: left 2s;
+}
+.slide-items {
+    height: 530px;
+}
+.slide-nav li{
+    border: 2px solid #ffffff;
+    height: 8px;
+    width: 8px;
+    border-radius: 90%;
+
+}
+.slide-nav {
+    position: absolute;
+    top: 460px;
+    left: 50px;
+}
+.slide-nav li {
+    float: left;
+    margin: 8px;
+    
+}
+.slide-nav .active {
+    background-color: goldenrod;
+}
+
+.sdk-contents , .news-contents , .com-contents{
+    width: 80%;
+    margin: 0 auto;
+}
+.sdk-title {
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom: 4px;
+}
+.sdk-title h1 {
+    font-size: 30px;
+}
+.sdk-title h3 {
+    font-size: 20px;
+}
+
+.sdk-items div{
+    width: 33%;
+    text-align: center;
+    float: left;
+    margin-top:  50px ;
+}
+
+
+.sdk-items div:hover{
+    -webkit-filter: brightness(150%); /* Chrome, Safari, Opera */
+    filter: brightness(150%);
+}
+
+.to-driod {
+    text-align: center;
+    margin: 100px auto 120px auto;
+
+}
+.to-driod {
+    color: white;
+
+    background-image:url(./../img/zoujin_banner.jpg); 
+    background-repeat:no-repeat;
+    background-size:100%;
+    -moz-background-size:100%;
+    padding: 50px 20px 100px 20px;
+    
+}
+
+.to-driod h2 {
+    font-size: 30px;
+}
+.to-driod p {
+   margin-bottom: 40px;
+}
+.to-driod .link-driod {
+    border: 2px solid white;
+    color: white;
+    display: inline;
+    padding: 10px 26px 10px 26px;
+    border-radius: 5px;
+}
+.to-driod .link-driod a{
+    color: white;
+}
+
+.to-driod .link-driod:hover{
+    -webkit-filter: brightness(50%); /* Chrome, Safari, Opera */
+    filter: brightness(50%);
+}
+
+.to-driod .link-driod:hover a{
+    color: blue;
+}
+
+.new {
+    width: 33%;
+    float: left;
+    padding: 20px;
+}
+
+.news-contents h1 {
+    text-align: center;
+}
+.times{
+    font-size: 30px;
+}
+.new-content>a{
+    color: #ff8b3d;
+}
+.new-content>a:hover{
+    color: blue;
+}
+
+.new-content>p {
+    margin-bottom: 40px;
+}
+.new-content>h2 {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.com-contents>h1 {
+    text-align: center;
+    margin: 100px 0 4   0px 0;
+}
+.forum {
+    float: left;
+    width: 50%;
+    padding: 40px;
+    height: 120px;
+    line-height: 120px;
+}
+.forum img {
+    height: 120px;
+    vertical-align: middle;
+    margin-right: 26px;
+
+}
+.forum a {
+    display: inline-block;
+    height: 80px;
+    line-height: 120px;
+    font-size: 24px;
+    color: #4c7ab7;
+}
+
+.partner {
+    margin: 140px auto 40px auto;
+}
+.partner img {
+    width: 100%;
+}
+
+.footer{
+    background-color: #3e3e3e;
+}
+.footer-left {
+    width: 30%;
+    padding: 40px 40px 50px 80px;
+    color: #858585;
+    font-size: 12px;
+    float: left;
+}
+
+.left-tips1 {
+    background-image: url(../img/icon_phone.png);
+    background-repeat:no-repeat;
+    padding-left: 60px;
+}
+
+.left-tips2 {
+    background-image: url(../img/icon_gupiao.png);
+    background-repeat:no-repeat;
+    padding-left: 60px; 
+}
+.info-nu{
+    font-size: 18px;
+    color: white;
+}
+
+.footer-right {
+    width: 70%;
+    padding: 40px 40px 50px 80px;
+    color: white;
+    float: right;
+}
+.footer-right a {
+    color: white;
+}
+.footer-link{
+    padding: 40px 40px 50px 40px;
+}
+.footer-link span{
+    padding: 0px 30px 0px 30px;
+}
+.copyright {
+    color: #858585;
+}
+.footer>hr{
+    color: #858585;
+    width: 90%;
+    height: 10px;
+}

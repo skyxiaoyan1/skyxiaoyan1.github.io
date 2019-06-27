@@ -1,0 +1,16 @@
+.com-items .com-item{
+    padding: 40px 20px 40px 20px;
+}
+.com-items .com-item img{
+    width: 100%;
+    
+}
+.com-items .com-item p{
+    line-height: 28px;
+}
+.com-items:last-child{
+    padding-bottom: 100px;
+}
+.header {
+    background-image: url(./../img/contact.jpg);
+}
